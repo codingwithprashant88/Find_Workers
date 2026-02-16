@@ -11,6 +11,7 @@ function RefreshHandler({ setIsAuthenticated }) {
       setIsAuthenticated(true);
       if (
         location.pathname === "/" ||
+        location.pathname === "/home" ||
         location.pathname === "/login" ||
         location.pathname === "/signup"
       ) {

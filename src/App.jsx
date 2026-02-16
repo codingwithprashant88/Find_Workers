@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate
+  Navigate,
 } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/AllAboutfile/About";
@@ -27,39 +27,90 @@ import ItI from "./components/AllAboutfile/SubMenu/ItI";
 import FindJob from "./components/Find-jobs/FindJob";
 import Project from "./components/AllAboutfile/Project";
 
-
-
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-     const PrivateRoute = ({element}) => {
-      const token = localStorage.getItem('token')
-        return token ? element : <Navigate to='/login'/>
-     }
+  const PrivateRoute = ({ element }) => {
+    const token = localStorage.getItem("token");
+    return token ? element : <Navigate to="/login" />;
+  };
+
+  const NotFound = () => {
+    return (
+      <div className="flex flex-col justify-center items-center h-screen text-center">
+        <h1 className="text-4xl font-bold mb-2">404</h1>
+        <p className="text-xl">Oops! That page can’t be found.</p>
+      </div>
+    );
+  };
+  
   return (
     <>
       <Router>
-    <RefreshHandler setIsAuthenticated={setIsAuthenticated}/>
+        <RefreshHandler setIsAuthenticated={setIsAuthenticated} />
         <Routes>
-          <Route path="/" element={<PrivateRoute element={<Home/>}/>}/>
-          <Route path = "/about" element={<PrivateRoute element={<About/>}/>}/>
-          <Route path="/business" element={<PrivateRoute element={<Busines/>}/>}/>
-          <Route path="/worker" element={<PrivateRoute element={<Workers/>}/>}/>
-          <Route path="/labour" element={<PrivateRoute element={<Labour/>}/>}/>
-          <Route path="/signup" element={<Signup/>}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/mason"  element={<PrivateRoute element={<Mason/>}/>}/>
-          <Route path="/painter"  element={<PrivateRoute element={<Painter/>}/>}/>
-          <Route path="/plumber"  element={<PrivateRoute element={<Plumber/>}/>}/>
-          <Route path="/carpenter"  element={<PrivateRoute element={<Carpenter/>}/>}/>
-          <Route path="/electrician"  element={<PrivateRoute element={<Electrician/>}/>}/>
-          <Route path="/foremen"  element={<PrivateRoute element={<Foremen/>}/>}/>
-          <Route path="/supervisor"  element={<PrivateRoute element={<Supervisor/>}/>}/>
-          <Route path="/engineer"  element={<PrivateRoute element={<Engineer/>}/>}/>
-          <Route path="/welder"  element={<PrivateRoute element={<Welder/>}/>}/>
-          <Route path="/iti-technician"  element={<PrivateRoute element={<ItI/>}/>}/>
-          <Route path="/jobs"  element={<PrivateRoute element={<FindJob/>}/>}/>
-          <Route path="/project"  element={<PrivateRoute element={<Project/>}/>}/>
+          <Route path="/" element={<PrivateRoute element={<Home />} />} />
+          <Route path="/about" element={<PrivateRoute element={<About />} />} />
+          <Route
+            path="/business"
+            element={<PrivateRoute element={<Busines />} />}
+          />
+          <Route
+            path="/worker"
+            element={<PrivateRoute element={<Workers />} />}
+          />
+          <Route
+            path="/labour"
+            element={<PrivateRoute element={<Labour />} />}
+          />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/mason" element={<PrivateRoute element={<Mason />} />} />
+          <Route
+            path="/painter"
+            element={<PrivateRoute element={<Painter />} />}
+          />
+          <Route
+            path="/plumber"
+            element={<PrivateRoute element={<Plumber />} />}
+          />
+          <Route
+            path="/carpenter"
+            element={<PrivateRoute element={<Carpenter />} />}
+          />
+          <Route
+            path="/electrician"
+            element={<PrivateRoute element={<Electrician />} />}
+          />
+          <Route
+            path="/foremen"
+            element={<PrivateRoute element={<Foremen />} />}
+          />
+          <Route
+            path="/supervisor"
+            element={<PrivateRoute element={<Supervisor />} />}
+          />
+          <Route
+            path="/engineer"
+            element={<PrivateRoute element={<Engineer />} />}
+          />
+          <Route
+            path="/welder"
+            element={<PrivateRoute element={<Welder />} />}
+          />
+          <Route
+            path="/iti-technician"
+            element={<PrivateRoute element={<ItI />} />}
+          />
+          <Route
+            path="/jobs"
+            element={<PrivateRoute element={<FindJob />} />}
+          />
+          <Route
+            path="/project"
+            element={<PrivateRoute element={<Project />} />}
+          />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </>
