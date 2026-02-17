@@ -114,23 +114,23 @@ function Busines() {
 
         <div className="grid space-y-4  md:space-y-0 md:space-x-4 md:grid-cols-3 lg:grid-cols-3">
           <div class="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs ">
-            <a href="#">
+            <Link to="/contact">
               <img
                 class="rounded-base "
                 src="https://skilledtradesbc.ca/sites/default/files/2023-01/tradeworkers_02_web.jpg"
                 alt=""
               />
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="#">
               <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading">
                 General Contractor
               </h5>
-            </a>
+            </Link>
             <p class="mb-6 text-body">
               Hire Contractors and Workers for your Big project​
             </p>
-            <a
-              href="#"
+            <Link
+              to="/contact"
               class="inline-flex items-center text-body bg-blue-700 box-border border border-default-medium  rounded hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none text-white/90 relative  overflow-hidden
     before:content-[''] before:absolute before:left-0 before:top-0
     before:h-full before:w-0 before:bg-pink-500
@@ -155,18 +155,18 @@ function Busines() {
                   d="M19 12H5m14 0-4 4m4-4-4-4"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
           {/*Card 2*/}
           <div class="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs ">
-            <a href="#">
+            <Link to="/contact">
               <img
                 class="rounded-base "
                 src="https://img.freepik.com/free-photo/male-worker-factory_1303-14306.jpg?semt=ais_hybrid&w=740&q=80"
                 alt=""
               />
-            </a>
-            <a href="#">
+            </Link>
+            <a href="/contact">
               <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading">
                 Manpower Supplier
               </h5>
@@ -174,8 +174,8 @@ function Busines() {
             <p class="mb-6 text-body">
               Hire Workers to supply to another company or project
             </p>
-            <a
-              href="#"
+            <Link
+              to="/contact"
               class="inline-flex items-center text-body bg-blue-700 box-border border border-default-medium  rounded hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none text-white/90 relative  overflow-hidden
     before:content-[''] before:absolute before:left-0 before:top-0
     before:h-full before:w-0 before:bg-pink-500
@@ -200,27 +200,27 @@ function Busines() {
                   d="M19 12H5m14 0-4 4m4-4-4-4"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
           {/*Card 3*/}
           <div class="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs ">
-            <a href="#">
+            <Link to="/contact">
               <img
                 class="rounded-base "
                 src="https://img.freepik.com/free-photo/civil-engineer-construction-worker-manager-holding-digital-tablet-blueprints-talking-planing-about-construction-site-cooperation-teamwork-concept_640221-298.jpg?semt=ais_hybrid&w=740&q=80"
                 alt=""
               />
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="/contact">
               <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading">
                 Sub-Contractor
               </h5>
-            </a>
+            </Link>
             <p class="mb-6 text-body">
               Hire Workers for multiple project in one click
             </p>
-            <a
-              href="#"
+            <Link
+              to="/contact"
               class="inline-flex items-center text-body bg-blue-700 box-border border border-default-medium  rounded hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none text-white/90 relative  overflow-hidden
     before:content-[''] before:absolute before:left-0 before:top-0
     before:h-full before:w-0 before:bg-pink-500
@@ -245,7 +245,7 @@ function Busines() {
                   d="M19 12H5m14 0-4 4m4-4-4-4"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

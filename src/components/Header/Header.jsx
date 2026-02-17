@@ -27,7 +27,7 @@ function Header() {
     { name: "Worker", slug: "/worker" },
     { name: "Business", slug: "/business" },
     { name: "Projects", slug: "/project" },
-    { name: "Contact Us", slug: "/contact" },
+    { name: "Contact Us", slug: "/contact-us" },
     { name: "Blogs", slug: "/blogs" },
   ];
 

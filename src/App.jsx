@@ -26,6 +26,7 @@ import Welder from "./components/AllAboutfile/SubMenu/Welder";
 import ItI from "./components/AllAboutfile/SubMenu/ItI";
 import FindJob from "./components/Find-jobs/FindJob";
 import Project from "./components/AllAboutfile/Project";
+import ClickBtn from "./components/AllAboutfile/ClickBtn";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -111,6 +112,10 @@ function App() {
             element={<PrivateRoute element={<Project />} />}
           />
           <Route path="*" element={<NotFound />} />
+          <Route
+            path="/contact"
+            element={<PrivateRoute element={< ClickBtn/>} />}
+          />
         </Routes>
       </Router>
     </>
