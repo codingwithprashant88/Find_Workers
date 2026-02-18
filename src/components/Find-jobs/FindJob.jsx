@@ -16,7 +16,7 @@ function FindJob() {
           setLoading(true)
 
           const query = new URLSearchParams(filters).toString();
-           const url = `http://localhost:5000/find/get?${query}`;
+           const url = `http://10.223.194.153:5000/find/get?${query}`;
            const response = await fetch(url)
            const data = await response.json();
            setJobs(data.All || [])

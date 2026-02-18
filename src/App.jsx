@@ -27,6 +27,7 @@ import ItI from "./components/AllAboutfile/SubMenu/ItI";
 import FindJob from "./components/Find-jobs/FindJob";
 import Project from "./components/AllAboutfile/Project";
 import ClickBtn from "./components/AllAboutfile/ClickBtn";
+import Contact from "./components/AllAboutfile/Contact";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -115,6 +116,10 @@ function App() {
           <Route
             path="/contact"
             element={<PrivateRoute element={< ClickBtn/>} />}
+          />
+          <Route
+            path="/contact-us"
+            element={<PrivateRoute element={< Contact/>} />}
           />
         </Routes>
       </Router>

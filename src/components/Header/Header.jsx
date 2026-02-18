@@ -28,7 +28,6 @@ function Header() {
     { name: "Business", slug: "/business" },
     { name: "Projects", slug: "/project" },
     { name: "Contact Us", slug: "/contact-us" },
-    { name: "Blogs", slug: "/blogs" },
   ];
 
   return (
@@ -136,7 +135,7 @@ function Header() {
                 onClick={handleLogout}
                 className="block text-center px-5 py-3 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition"
               >
-               Logout
+                Logout
               </Link>
             </li>
           </ul>

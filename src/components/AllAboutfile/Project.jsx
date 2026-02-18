@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Header/Header";
 import Footer from '../Footer/Footer'
+import { handleSuccess } from "../Alert/AlertMsg";
 
 function Project() {
    const [fillter, setFilter] = useState({
@@ -17,7 +18,7 @@ function Project() {
     try {
       setLoading(true);
        const query = new URLSearchParams(fillter).toString();
-      const url = `http://localhost:5000/hiring/get?${query}`;
+      const url = `http://10.223.194.153:5000/hiring/get?${query}`;
       const response = await fetch(url);
       const data = await response.json();
       setHiring(data.card || []);
@@ -31,6 +32,10 @@ function Project() {
   useEffect(() => {
     fetchCard();
   }, [fillter]);
+
+  const handleSubmit = () => {
+       handleSuccess('Your From Submitted Successfully')
+  }
 
   return (
     <>
@@ -159,8 +164,8 @@ function Project() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-y-3 lg:gap-x-3 md:pr-10 lg:pr-10">
               {/* CARD 1 */}
               {hiring.map((post) => (
-                <a key={post._id}
-                href="#"
+                <div key={post._id}
+                
                 className="bg-orange-300/30 min-h-full rounded-lg block  p-6 border-yellow-500 border-2 rounded-base shadow-xs hover:bg-neutral-secondary-medium"
               >
                 <h5 className="mb-3 text-sm tracking-tight text-heading leading-8 text-start">
@@ -198,10 +203,10 @@ function Project() {
                   </h5>
                 </div>
 
-                <button className="bg-blue-500 p-2 w-full rounded-lg">
+                <button onClick={handleSubmit} className="bg-blue-500 p-2 w-full rounded-lg">
                   Apply
                 </button>
-              </a>
+              </div>
               ))}
             </div>
           </div>
