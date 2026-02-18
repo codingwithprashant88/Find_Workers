@@ -655,7 +655,7 @@ function Workers() {
               {/* Image */}
               <img
                 className="h-56  rounded-lg  object-cover sm:h-64 md:h-auto md:w-56 lg:h-96 lg:w-[460px]"
-                src="/chowk.png"
+               src={`${import.meta.env.BASE_URL}chowk.png`}
                 alt="Construction workers on site"
               />
               {/* Content */}

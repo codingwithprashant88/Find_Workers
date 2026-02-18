@@ -38,7 +38,7 @@ function FindJob() {
   <section className="relative w-full">
     <div className="relative h-48 md:h-56 w-full overflow-hidden rounded-2xl">
       <img
-        src="/findjob.png"
+        src={`${import.meta.env.BASE_URL}findjob.png`}
         alt="jobs"
         className="w-full h-full object-cover"
       />

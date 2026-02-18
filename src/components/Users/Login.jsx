@@ -23,12 +23,14 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const {email, password } = loginInfo;
+    const { email, password } = loginInfo;
     if (!email || !password) {
       return handleError(" email or password must required");
     }
     try {
-      const url = `http://10.223.194.153:5000/auth/login`;
+      const url = `${import.meta.env.VITE_API_URL}/auth/login`;
+  
+      
       const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -63,7 +65,11 @@ function Login() {
         <div className="w-full max-w-md p-8">
           {/* Logo */}
           <div className="flex justify-center mb-4">
-            <img src="/logo.png" alt="find-workers" className="h-28" />
+            <img
+              src={`${import.meta.env.BASE_URL}logo.png`}
+              alt="find-workers"
+              className="h-28"
+            />
           </div>
 
           {/* Intro */}

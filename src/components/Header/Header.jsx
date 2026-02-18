@@ -38,7 +38,7 @@ function Header() {
           <div className="flex items-center">
             <a href="/" className="flex items-center space-x-4">
               <img
-                src="/logo.png"
+                src={`${import.meta.env.BASE_URL}logo.png`}
                 className="h-16 scale-[180%] w-auto object-contain"
                 alt="Logo"
               />

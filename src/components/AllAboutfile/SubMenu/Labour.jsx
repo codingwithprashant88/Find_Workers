@@ -99,7 +99,7 @@ function Labour() {
                 </p>
               </div>
               <img
-                src="/Info.png"
+                src={`${import.meta.env.BASE_URL}/Info.png`}
                 className="h-56  rounded-lg object-cover sm:h-64 md:h-auto md:w-56 lg:h-96 lg:w-[460px]"
                 alt="Information"
               />
