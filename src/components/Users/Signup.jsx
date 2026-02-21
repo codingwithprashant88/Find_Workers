@@ -64,7 +64,7 @@ function Signup() {
         <div className="w-full max-w-md p-8">
           {/* Logo */}
           <div className="flex justify-center mb-4">
-            <img src="/logo.png" alt="find-workers" className="h-28" />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="find-workers" className="h-28" />
           </div>
 
           {/* Intro */}
