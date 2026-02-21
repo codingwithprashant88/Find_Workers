@@ -108,7 +108,7 @@ function Header() {
         }`}
       >
         <div className="flex items-center justify-between p-4 border-b">
-          <img src="/logo.png" className="h-10" alt="Logo" />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} className="h-10" alt="Logo" />
           <button onClick={() => setIsOpen(false)}>✕</button>
         </div>
 
